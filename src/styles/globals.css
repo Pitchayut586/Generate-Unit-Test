@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.chat-assistant-pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+/* custom-scrollbar.css */
+/* Customizing the scrollbar track (background) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+  
+  /* Customizing the scrollbar handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
