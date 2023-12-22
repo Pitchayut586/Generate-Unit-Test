@@ -70,7 +70,7 @@ export default function Home() {
             </div>
 
             {/* Textarea and Button - Fixed at Bottom */}
-            <div className="fixed bottom-0 flex flex-row justify-center items-center w-full pb-3 px-4 sm:px-8 max-h-[100px] blackdrop-blur">
+            <div className="fixed bottom-3 flex flex-row justify-center items-center w-full pb-3 px-4 sm:px-8 max-h-[100px] blackdrop-blur">
                 <div className="flex w-full max-w-4xl justify-center">
                     <textarea
                         disabled={isLoading}
