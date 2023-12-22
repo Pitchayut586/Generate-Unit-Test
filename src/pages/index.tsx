@@ -1,6 +1,5 @@
 import Navbar from '@/components/Layouts/Navbar';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 
 export default function Home() {
     const router = useRouter();
@@ -16,7 +15,7 @@ export default function Home() {
                 <div className="flex gap-8 w-full h-[60vh] items-center justify-center">
                     <div className="card card-side bg-base-100 shadow-xl">
                         <figure className="w-[200px] h-[200px] object-cover">
-                            <Image
+                            <img
                                 src="https://img5.pic.in.th/file/secure-sv1/imagesab2c4ba57dd5b5e5.png"
                                 alt="Assistant"
                             />
@@ -33,7 +32,7 @@ export default function Home() {
                     </div>
                     <div className="card card-side bg-base-100 shadow-xl">
                         <figure className="w-[200px] h-[200px] object-cover">
-                            <Image
+                            <img
                                 src="https://img2.pic.in.th/pic/afa50ad0-9469-11ee-b3d3-a74cc04b857f_original-1.jpeg"
                                 alt="Gemini"
                             />
