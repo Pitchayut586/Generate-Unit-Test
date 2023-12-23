@@ -11,3 +11,10 @@ export type CodeBlockType = {
 export type MarkdownDisplayProps = {
     content: string;
 };
+
+export type DataModelType = {
+    name: string;
+    description: string;
+    image_url: string;
+    path: string;
+};

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 
 const Navbar = ({ navName }: any) => {
@@ -21,7 +22,7 @@ const Navbar = ({ navName }: any) => {
                 </button>
             </div>
             <div className="flex-1">
-                <a className="btn btn-ghost text-xl">{navName}</a>
+                <Link href='/' className="btn btn-ghost text-xl">{navName}</Link>
             </div>
             <div className="flex-none">
                 <button className="btn btn-square btn-ghost">

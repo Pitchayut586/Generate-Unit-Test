@@ -32,8 +32,8 @@ export default function GeminiPage() {
         const messageModelId = generateUUID(); // Unique ID for the model's messages
 
         try {
-            // const responseStream: any = await fetch('http://localhost:8000/api/germini/chat', {
-            const responseStream: any = await fetch('/api/gemini/chat', {
+            const responseStream: any = await fetch('http://localhost:8000/api/germini/chat', {
+            // const responseStream: any = await fetch('/api/gemini/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -94,7 +94,7 @@ export default function GeminiPage() {
         <div className="relative w-full h-full flex flex-col justify-start items-start">
             {/* Header - Fixed at Top */}
             <div className="fixed flex top-0 z-10 w-full items-centerpx-4 h-[50px]">
-                <Navbar navName={'Generate Unit Test By Google Gemini'} />
+                <Navbar navName={'Google Gemini'} />
             </div>
 
             {/* Messages - Scrollable Content */}
@@ -114,13 +114,13 @@ export default function GeminiPage() {
                         // onKeyDown={(event) => handleEnterPress(event)}
                     />
                     {isLoading ? (
-                        <button className="ml-2 px-4 btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                        <button className="ml-2 px-4 btn btn-primary btn-lg">
                             <span className="loading loading-spinner" />
                             Send
                         </button>
                     ) : (
                         <button
-                            className="ml-2 px-4 btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+                            className="ml-2 px-4 btn btn-primary btn-lg"
                             onClick={() => onSubmit()}
                         >
                             Send

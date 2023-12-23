@@ -36,7 +36,7 @@ const MessagesGemini = ({ data, lastMessageRef }: MessageType) => {
                                         {' ' + dayjs(value?.created_at).format('HH:mm:ss')}
                                     </time>
                                 </div>
-                                <div className="chat-bubble max-w-3xl">
+                                <div className="chat-bubble max-w-lg lg:max-w-3xl">
                                     <MarkdownDisplay content={value?.content} />
                                 </div>
                                 <div className="chat-footer opacity-50">Delivered</div>
@@ -59,7 +59,7 @@ const MessagesGemini = ({ data, lastMessageRef }: MessageType) => {
                                         {' ' + dayjs(value?.created_at).format('HH:mm:ss')}
                                     </time>
                                 </div>
-                                <div className="chat-bubble max-w-3xl chat-assistant-pre">{value?.content}</div>
+                                <div className="chat-bubble max-w-lg lg:max-w-3xl chat-assistant-pre">{value?.content}</div>
                                 <div className="chat-footer opacity-50">Seen at 12:46</div>
                             </div>
                         );

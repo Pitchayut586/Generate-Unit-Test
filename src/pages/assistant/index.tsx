@@ -27,7 +27,8 @@ export default function Home() {
         };
 
         try {
-            const response = await fetch(`/api/assistants/chat`, {
+            const response = await fetch(`http://localhost:8000/api/assistants/chat`, {
+            // const response = await fetch(`/api/assistants/chat`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -61,7 +62,7 @@ export default function Home() {
         <div className="relative w-full h-full max-h-full flex flex-col justify-start items-start">
             {/* Header - Fixed at Top */}
             <div className="fixed flex top-0 z-10 w-full items-centerpx-4 h-[50px]">
-                <Navbar navName={'Generate Unit Test By GPT Assistant'} />
+                <Navbar navName={'GPT Assistant'} />
             </div>
 
             {/* Messages - Scrollable Content */}
@@ -81,13 +82,13 @@ export default function Home() {
                         // onKeyDown={(event) => handleEnterPress(event)}
                     />
                     {isLoading ? (
-                        <button className="ml-2 px-4 btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg">
+                        <button className="ml-2 px-4 btn btn-primary btn-lg">
                             <span className="loading loading-spinner" />
                             Send
                         </button>
                     ) : (
                         <button
-                            className="ml-2 px-4 btn btn-primary btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+                            className="ml-2 px-4 btn btn-primary btn-lg"
                             onClick={() => onSubmit()}
                         >
                             Send
