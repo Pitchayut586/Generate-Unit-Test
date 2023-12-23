@@ -32,7 +32,7 @@ export default function GeminiPage() {
         const messageModelId = generateUUID(); // Unique ID for the model's messages
 
         try {
-            const responseStream: any = await fetch('http://localhost:8000/api/germini/chat', {
+            const responseStream: any = await fetch('https://4110-1-20-63-109.ngrok-free.app/api/germini/chat', {
                 // const responseStream: any = await fetch('/api/gemini/chat', {
                 method: 'POST',
                 headers: {

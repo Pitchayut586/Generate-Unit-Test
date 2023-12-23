@@ -27,7 +27,7 @@ export default function Home() {
         };
 
         try {
-            const response = await fetch(`http://localhost:8000/api/assistants/chat`, {
+            const response = await fetch(`https://4110-1-20-63-109.ngrok-free.app/api/assistants/chat`, {
             // const response = await fetch(`/api/assistants/chat`, {
                 method: 'POST',
                 headers: {
