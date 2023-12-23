@@ -42,6 +42,8 @@ export default function GeminiPage() {
             }
         }
 
+        console.log(conversation_history)
+
         try {
             const responseStream: any = await fetch('http://localhost:8000/api/germini/chat', {
                 // const responseStream: any = await fetch('/api/gemini/chat', {
