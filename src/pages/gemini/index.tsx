@@ -31,19 +31,6 @@ export default function GeminiPage() {
         setIsLoading(true);
         const messageModelId = generateUUID(); // Unique ID for the model's messages
 
-        let conversation_history = germiniPrompt.history;
-
-        if (conversation?.length > 1) {
-            for (const value of conversation) {
-                conversation_history.push({
-                    role: value.role,
-                    parts: value.content,
-                });
-            }
-        }
-
-        console.log(conversation_history)
-
         try {
             const responseStream: any = await fetch('http://localhost:8000/api/germini/chat', {
                 // const responseStream: any = await fetch('/api/gemini/chat', {
@@ -52,7 +39,7 @@ export default function GeminiPage() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    history: conversation_history,
+                    history: germiniPrompt.history,
                     msg: prompt,
                 }),
             });
