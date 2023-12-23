@@ -31,15 +31,26 @@ export default function GeminiPage() {
         setIsLoading(true);
         const messageModelId = generateUUID(); // Unique ID for the model's messages
 
+        let conversation_history = germiniPrompt.history;
+
+        if (conversation?.length > 1) {
+            for (const value of conversation) {
+                conversation_history.push({
+                    role: value.role,
+                    parts: value.content,
+                });
+            }
+        }
+
         try {
             const responseStream: any = await fetch('http://localhost:8000/api/germini/chat', {
-            // const responseStream: any = await fetch('/api/gemini/chat', {
+                // const responseStream: any = await fetch('/api/gemini/chat', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    history: germiniPrompt.history,
+                    history: conversation_history,
                     msg: prompt,
                 }),
             });
@@ -119,10 +130,7 @@ export default function GeminiPage() {
                             Send
                         </button>
                     ) : (
-                        <button
-                            className="ml-2 px-4 btn btn-primary btn-lg"
-                            onClick={() => onSubmit()}
-                        >
+                        <button className="ml-2 px-4 btn btn-primary btn-lg" onClick={() => onSubmit()}>
                             Send
                         </button>
                     )}

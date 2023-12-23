@@ -5,3 +5,8 @@ export type GeminiMessageType = {
     role: Role;
     content: string;
 };
+
+export type GeminiMessageHistoryType = {
+    role: Role;
+    parts: string;
+};
